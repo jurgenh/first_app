@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.1.rc1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -27,6 +27,8 @@ group :doc do
 end
 
 group :production do
+  # heroku uses postgres
   gem 'pg', '0.15.1'
+  # heroku uses 12factor for static assets like images and styplesheets
   gem 'rails_12factor', '0.0.2'
 end
